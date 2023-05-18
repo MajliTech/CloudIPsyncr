@@ -1,0 +1,27 @@
+name: Build executables
+
+on:
+  release: 
+    types: [published]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: cargo build --release --verbose
+    - name: ZIP the release
+      run: zip release.zip target/release/clouddns target/release/clouddns-setup
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: Release
+        path: release.zip
+    - name: GitHub Releases
+      uses: fnkr/github-action-ghr@v1.3
