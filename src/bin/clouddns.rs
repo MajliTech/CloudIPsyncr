@@ -25,7 +25,7 @@ fn main() {
     let client = Client::new();
     println!("{} is starting...", "ClouDDNS".yellow());
     println!("{}", "Trying to read the config...".blue());
-    let config_file_result = fs::read_to_string("clouddns.json");
+    let config_file_result = fs::read_to_string("/etc/clouddns.json");
     let config_file = match config_file_result {
         Ok(config_file) => config_file,
         Err(_error) => {
