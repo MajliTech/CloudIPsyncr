@@ -3,6 +3,8 @@ name: Build executables
 on:
   release: 
     types: [published]
+  workflow_dispatch:
+    
 
 env:
   CARGO_TERM_COLOR: always
@@ -15,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: cargo build --release --verbose
+      run: cargo build --release
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
