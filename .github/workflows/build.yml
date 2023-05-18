@@ -22,7 +22,7 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: Release
+        name: linux-x64
         path: |
               target/release/clouddns-setup
               target/release/clouddns
