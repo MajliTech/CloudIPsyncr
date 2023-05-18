@@ -22,6 +22,6 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with:
         name: Release
-        path: release.zip
-    - name: GitHub Releases
-      uses: fnkr/github-action-ghr@v1.3
+        path: |
+              - target/release/clouddns-setup
+              - target/release/clouddns
