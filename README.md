@@ -1,4 +1,5 @@
 # ClouDDNS
+[![Build executables](https://github.com/MajliTech/clouddns/actions/workflows/build.yml/badge.svg)](https://github.com/MajliTech/clouddns/actions/workflows/build.yml)
 #### A simple tool for changing your CloudFlare powered (sub)domain into a DDNS (sub)domain
 ## What does this do?
 This simple program checks your IP every minute, and updates it in CloudFlare. This is very useful when you have a rotating IP address, such when setting up a home server available to the clearnet. 
