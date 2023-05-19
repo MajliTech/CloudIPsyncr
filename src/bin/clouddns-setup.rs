@@ -51,6 +51,9 @@ fn main() {
         header::HeaderValue::from_static("application/json"),
     );
     config["email"] = json::JsonValue::String(email);
+    config["type"]= json::JsonValue::String("A".to_string()
+);
+    println!("{}","For now, only IPv4 is supported. Future versions will support IPv6 as well.".yellow());
     // https://api.cloudflare.com/client/v4/user/tokens/verify
     // let mut map = std::collections::HashMap::new();
     let response = match client.get("https://api.cloudflare.com/client/v4/user/tokens/verify").headers(headers.clone()).send()
