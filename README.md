@@ -41,6 +41,7 @@ WantedBy=multi-user.target
 4. Run `clouddns-setup`
     - Follow the instructions on screen
 ### Build it yourself
+#### Manually
 Since this is open source, you can build it yourself.
 1. Check if you have `cargo` installed
     - If yes, continue
@@ -55,6 +56,9 @@ Since this is open source, you can build it yourself.
     - Run `mv ./target/release/clouddns /usr/bin/`
     - Run `mv ./target/release/clouddns-setup /usr/bin/`
 5. Continue from the `Downloading binaries` step 2
+#### Automatically
+1. run: sudo ./build.sh
+    - the script will do everything for you.
 ## Why was this created?
 I just had too much free time left. That's why.
 ## Any way to sponsor?
