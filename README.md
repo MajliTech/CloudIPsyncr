@@ -4,11 +4,15 @@
 This simple program checks your IP every minute, and updates it in CloudFlare. This is very useful when you have a rotating IP address, such when setting up a home server available to the clearnet. 
 ## How to install it?
 ### (Soon) using your distro's package manager
-I will soon make some packages for popular distros such as Debian (yes, that also means Ubuntu), Arch and Fedora.
+
+---
+## Looking for maintainers!
+Are you willing to help create those packages? If yes, please reach me at hello@majlitech.pl
+
+---
+
+
 ### Downloading binaries
-<!-- 0. Elevate to root
-    - run `sudo bash`
-    - run `cd ~` -->
 1. `wget` or `curl` the latest release and move it's contents to /usr/bin/. 
     - (optional) create a new dir: mkdir clouddns-binaries && cd clouddns-binaries
     - run `wget https://github.com/MajliTech/clouddns/releases/download/v1.1.1/linux-x64.zip`
