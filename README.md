@@ -26,20 +26,21 @@ Are you willing to help create those packages? If yes, please reach me at hello@
     - (optional) create a new dir: mkdir clouddns-binaries && cd clouddns-binaries
     - run `wget https://github.com/MajliTech/CloudIPsyncr/releases/download/v1.1.1/linux-x64.zip`
     - unzip it: `unzip linux-x64.zip`
-    - move the files: `sudo mv clouddns* /usr/bin` (soon this will change)
+    - move the files: `sudo mv cipsyncr-setup /usr/bin`
+    - move the files: `sudo mv cloudipsyncr /usr/bin`
 2. Make the files executable.
-    - run `sudo chmod +x /usr/bin/clouddns /usr/bin/clouddns-setup` (soon this will change)
+    - run `sudo chmod +x /usr/bin/cloudipsyncr /usr/bin/cipsyncr-setup`
 3. Write a simple systemd service (optional)
-   - Run `systemctl edit --full --force clouddns` (soon this will change)
+   - Run `systemctl edit --full --force cloudipsyncr`
    - Paste the following contents
 ```ini
 [Unit]
-Description=ClouDDNS #(soon this will change)
+Description=CloudIPsyncr
 After=network-online.target
 Wants=network-online.target systemd-networkd-wait-online.service
 
 [Service]
-ExecStart=/usr/bin/clouddns # (soon this will change)
+ExecStart=/usr/bin/cloudipsyncr
 DynamicUser=yes
 After=network-online.target
 Wants=network-online.target systemd-networkd-wait-online.service
@@ -47,7 +48,7 @@ Wants=network-online.target systemd-networkd-wait-online.service
 [Install]
 WantedBy=multi-user.target
 ```
-4. Run `clouddns-setup`  (soon this will change)
+4. Run `cipsyncr-setup`  
     - Follow the instructions on screen
 ### Build it yourself
 #### Manually
@@ -60,10 +61,10 @@ Since this is open source, you can build it yourself.
     - Cd into the dir: `cd CloudIPsyncr`
 3. Build it
     - Run `cargo build --release`
-    - The binaries are at `./target/release/clouddns` and `./target/release/clouddns-setup` (soon this will change)
+    - The binaries are at `./target/release/cipsyncr-setup` and `./target/release/cloudipsyncr`
 4. Move the binaries
-    - Run `mv ./target/release/clouddns /usr/bin/` (soon this will change)
-    - Run `mv ./target/release/clouddns-setup /usr/bin/` (soon this will change)
+    - Run `mv ./target/release/cloudipsyncr /usr/bin/`
+    - Run `mv ./target/release/cipsyncr-setup /usr/bin/` 
 5. Continue from the `Downloading binaries` step 2
 #### Automatically
 1. run: sudo ./build.sh
