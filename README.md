@@ -1,4 +1,8 @@
-# ClouDDNS
+# CloudIPsyncr 
+---
+## Changed name to avoid legal issues
+Next releases will have their name changed to CloudIPsyncr. I will soon make an migration program
+---
 [![Build executables](https://github.com/MajliTech/clouddns/actions/workflows/build.yml/badge.svg)](https://github.com/MajliTech/clouddns/actions/workflows/build.yml)
 #### A simple tool for changing your CloudFlare powered (sub)domain into a DDNS (sub)domain
 ## What does this do?
@@ -16,7 +20,7 @@ Are you willing to help create those packages? If yes, please reach me at hello@
 ### Downloading binaries
 1. `wget` or `curl` the latest release and move it's contents to /usr/bin/. 
     - (optional) create a new dir: mkdir clouddns-binaries && cd clouddns-binaries
-    - run `wget https://github.com/MajliTech/clouddns/releases/download/v1.1.1/linux-x64.zip`
+    - run `wget https://github.com/MajliTech/CloudIPsyncr/releases/download/v1.1.1/linux-x64.zip`
     - unzip it: `unzip linux-x64.zip`
     - move the files: `sudo mv clouddns* /usr/bin`
 2. Make the files executable.
