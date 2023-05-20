@@ -8,7 +8,12 @@
 
 Next releases will have their name changed to CloudIPsyncr. I will soon make an migration program
 
+## Migrating from ClouDDNS
+
+To migrate, run `curl https://raw.githubusercontent.com/MajliTech/CloudIPsyncr/master/migrate.sh | sh`
+
 ---
+
 ## What does this do?
 This simple program checks your IP every minute, and updates it in CloudFlare. This is very useful when you have a rotating IP address, such when setting up a home server available to the clearnet. 
 ## How to install it?
