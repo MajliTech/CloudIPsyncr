@@ -16,7 +16,7 @@ fn get_external_ip_address(config: &JsonValue) -> &'static str{
         return "http://v6.ident.me/";
     } else {
         panic!(
-            "Something is wrong with the config, couldn't set check IP address. Have you touched it? Try running clouddns-setup"
+            "Something is wrong with the config, couldn't set check IP address. Have you touched it? Try running cipsyncr-setup"
         )
     }
 }
