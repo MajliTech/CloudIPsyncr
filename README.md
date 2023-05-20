@@ -24,7 +24,8 @@ This simple program checks your IP every minute, and updates it in CloudFlare. T
 Are you willing to help create those packages? If yes, please reach me at hello@majlitech.pl
 
 ---
-
+### Using quick start
+In every release, there is a Quick Start command. Just paste it into the terminal and you are done!
 
 ### Downloading binaries
 1. `wget` or `curl` the latest release and move it's contents to /usr/bin/. 
