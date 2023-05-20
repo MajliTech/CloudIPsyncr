@@ -45,7 +45,7 @@ fn main() {
         );
         std::process::exit(1)
     }
-    println!("{}", "Welcome to ClouDDNS setup!".green());
+    println!("{}", "Welcome to CloudIPsyncr setup!".green());
     println!("Before we begin, head over to https://dash.cloudflare.com/profile/api-tokens and generate an API token for this program.");
     let key = input!("After acquiring the key, paste it here: ");
     config["token"] = json::JsonValue::String(key);
@@ -120,10 +120,10 @@ fn main() {
         },
     );
     print!("\n");
-    wait_for_keypress("Ok, now, create the subdomain you want to update (for now fill it with 0.0.0.0 for an A record or :: for an AAAA).\nIf it's alredy created, give it a comment containing exactly `clouddns` (no quotation marks).\nIf you have done that, press any key to continue.");
+    wait_for_keypress("Ok, now, create the subdomain you want to update (for now fill it with 0.0.0.0 for an A record or :: for an AAAA).\nIf it's alredy created, give it a comment containing exactly `cloudipsyncr` (no quotation marks).\nIf you have done that, press any key to continue.");
     let response = match client
         .get(format!(
-            "https://api.cloudflare.com/client/v4/zones/{}/dns_records?comment=clouddns",
+            "https://api.cloudflare.com/client/v4/zones/{}/dns_records?comment=cloudipsyncr",
             config["zoneid"]
         ))
         .headers(headers.clone())
@@ -167,11 +167,11 @@ fn main() {
     }
     let biding = &config.dump();
     let config_dump = biding.as_bytes();
-    match std::fs::write("/etc/clouddns.json", config_dump.clone()) {
+    match std::fs::write("/etc/cloudipsyncr.json", config_dump.clone()) {
         Err(_) => panic!(
             "Even with root, something went wrong while writing the file. Check your system."
         ),
         Ok(_) => {}
     };
-    println!("{} ClouDDNS has been now set up. If you have installed this using your package manager:\nTo make this start on system boot, run:\n   sudo systemctl enable clouddns\nTo start now AND on system boot:\n   sudo systemctl enable --now clouddns","Hooray!".yellow());
+    println!("{} ClouDDNS has been now set up. If you have installed this using your package manager:\nTo make this start on system boot, run:\n   sudo systemctl enable cloudipsyncr\nTo start now AND on system boot:\n   sudo systemctl enable --now clouddns","Hooray!".yellow());
 }
