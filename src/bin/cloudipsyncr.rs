@@ -25,15 +25,16 @@ fn main() {
     let client = Client::new();
     println!("{} is starting...", "ClouDDNS".yellow());
     println!("{}", "Trying to read the config...".blue());
-    let config_file_result = fs::read_to_string("/etc/clouddns.json");
+    let config_file_result = fs::read_to_string("/etc/cloudipsyncr.json");
     let config_file = match config_file_result {
         Ok(config_file) => config_file,
         Err(_error) => {
             println!(
                 "{}",
-                "Couldn't open file /etc/clouddns.yaml, have your run clouddns-setup?".red()
+                "Couldn't open file /etc/cloudipsyncr.json, have your run clouddns-setup?".red()
             );
             process::exit(1)
+            
         }
     };
     let config_reader = json::parse(&config_file);
