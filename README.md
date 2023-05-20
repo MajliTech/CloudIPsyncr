@@ -26,20 +26,20 @@ Are you willing to help create those packages? If yes, please reach me at hello@
     - (optional) create a new dir: mkdir clouddns-binaries && cd clouddns-binaries
     - run `wget https://github.com/MajliTech/CloudIPsyncr/releases/download/v1.1.1/linux-x64.zip`
     - unzip it: `unzip linux-x64.zip`
-    - move the files: `sudo mv clouddns* /usr/bin`
+    - move the files: `sudo mv clouddns* /usr/bin` (soon this will change)
 2. Make the files executable.
-    - run `sudo chmod +x /usr/bin/clouddns /usr/bin/clouddns-setup`
+    - run `sudo chmod +x /usr/bin/clouddns /usr/bin/clouddns-setup` (soon this will change)
 3. Write a simple systemd service (optional)
-   - Run `systemctl edit --full --force clouddns`
+   - Run `systemctl edit --full --force clouddns` (soon this will change)
    - Paste the following contents
 ```ini
 [Unit]
-Description=ClouDDNS
+Description=ClouDDNS #(soon this will change)
 After=network-online.target
 Wants=network-online.target systemd-networkd-wait-online.service
 
 [Service]
-ExecStart=/usr/bin/clouddns
+ExecStart=/usr/bin/clouddns # (soon this will change)
 DynamicUser=yes
 After=network-online.target
 Wants=network-online.target systemd-networkd-wait-online.service
@@ -47,7 +47,7 @@ Wants=network-online.target systemd-networkd-wait-online.service
 [Install]
 WantedBy=multi-user.target
 ```
-4. Run `clouddns-setup`
+4. Run `clouddns-setup`  (soon this will change)
     - Follow the instructions on screen
 ### Build it yourself
 #### Manually
@@ -56,14 +56,14 @@ Since this is open source, you can build it yourself.
     - If yes, continue
     - If not, install it using instructions on https://rustup.rs/
 2. Clone this repo
-    - Run `git clone https://github.com/MajliTech/clouddns.git`
-    - Cd into the dir: `cd clouddns`
+    - Run `git clone https://github.com/MajliTech/CloudIPsyncr.git`
+    - Cd into the dir: `cd CloudIPsyncr`
 3. Build it
     - Run `cargo build --release`
-    - The binaries are at `./target/release/clouddns` and `./target/release/clouddns-setup`
+    - The binaries are at `./target/release/clouddns` and `./target/release/clouddns-setup` (soon this will change)
 4. Move the binaries
-    - Run `mv ./target/release/clouddns /usr/bin/`
-    - Run `mv ./target/release/clouddns-setup /usr/bin/`
+    - Run `mv ./target/release/clouddns /usr/bin/` (soon this will change)
+    - Run `mv ./target/release/clouddns-setup /usr/bin/` (soon this will change)
 5. Continue from the `Downloading binaries` step 2
 #### Automatically
 1. run: sudo ./build.sh
