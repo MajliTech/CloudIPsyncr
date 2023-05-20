@@ -1,10 +1,14 @@
 # CloudIPsyncr 
----
-## Changed name to avoid legal issues
-Next releases will have their name changed to CloudIPsyncr. I will soon make an migration program
----
+
 [![Build executables](https://github.com/MajliTech/clouddns/actions/workflows/build.yml/badge.svg)](https://github.com/MajliTech/clouddns/actions/workflows/build.yml)
 #### A simple tool for changing your CloudFlare powered (sub)domain into a DDNS (sub)domain
+---
+
+## Changed name to avoid legal issues 
+
+Next releases will have their name changed to CloudIPsyncr. I will soon make an migration program
+
+---
 ## What does this do?
 This simple program checks your IP every minute, and updates it in CloudFlare. This is very useful when you have a rotating IP address, such when setting up a home server available to the clearnet. 
 ## How to install it?
