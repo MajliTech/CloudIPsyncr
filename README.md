@@ -6,7 +6,7 @@
 
 ## Changed name to avoid legal issues 
 
-Next releases will have their name changed to CloudIPsyncr. I will soon make an migration program
+Next releases will have their name changed to CloudIPsyncr.
 
 ## Migrating from ClouDDNS
 
