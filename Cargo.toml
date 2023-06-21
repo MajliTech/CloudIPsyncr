@@ -11,6 +11,6 @@ crossterm = "0.26.1"
 input-macro = "0.2.0"
 is-root = "0.1.2"
 json = "0.12.4"
-reqwest = { version = "0.11.17", features = ["blocking","json"] }
+reqwest = { version = "0.11.18", features = ["blocking","json"] }
 serde_json = "1.0.96"
 termion = "2.0.1"
