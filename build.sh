@@ -19,13 +19,13 @@ echo Welcome to this ClouDDNS installer!
 
 echo Building ClouDDNS
 cargo build --release
-cp target/release/clouddns /usr/bin
-chmod +x /usr/bin/clouddns
-cp target/release/clouddns-setup /usr/bin
-chmod +x /usr/bin/clouddns-setup
+cp target/release/cloudipsyncr /usr/bin
+chmod +x /usr/bin/cloudipsyncr
+cp target/release/cipsyncr-setup /usr/bin
+chmod +x /usr/bin/cipsyncr-setup
 echo Compiled and installed successfully
-echo running clouddns-setup
-clouddns-setup
+echo running cloudipsyncr-setup
+cloudipsyncr-setup
 if [ $DEPORT_RUST -eq 1 ]
 then
 echo Uninstalling rustup...
