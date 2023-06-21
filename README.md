@@ -29,7 +29,7 @@ In every release, there is a Quick Start command. Just paste it into the termina
 
 ### Downloading binaries
 1. `wget` or `curl` the latest release and move it's contents to /usr/bin/. 
-    - (optional) create a new dir: mkdir clouddns-binaries && cd clouddns-binaries
+    - (optional) create a new dir: mkdir cloudipsyncr-binaries && cd cloudipsyncr-binaries
     - run `wget https://github.com/MajliTech/CloudIPsyncr/releases/download/v1.1.1/linux-x64.zip`
     - unzip it: `unzip linux-x64.zip`
     - move the files: `sudo mv cipsyncr-setup /usr/bin`
