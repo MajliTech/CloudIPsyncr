@@ -151,7 +151,6 @@ fn main() {
             config["record"] = json::JsonValue::String(url.to_string());
             config["recordid"] =
                 json::JsonValue::String(response["result"][0]["id"].as_str().unwrap().to_string());
-            println!("{}",response);
             if response["result"][0]["type"].as_str().unwrap().to_string()!="A" || response["result"][0]["type"].as_str().unwrap().to_string()!="AAAA" {
                 check_ip_version(response["result"][0]["type"].as_str().unwrap().to_string());
                 config["type"]=json::JsonValue::String(response["result"][0]["id"].as_str().unwrap().to_string());
