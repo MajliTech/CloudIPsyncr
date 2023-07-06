@@ -174,5 +174,5 @@ fn main() {
         ),
         Ok(_) => {}
     };
-    println!("{} ClouDDNS has been now set up. If you have installed this using your package manager:\nTo make this start on system boot, run:\n   sudo systemctl enable cloudipsyncr\nTo start now AND on system boot:\n   sudo systemctl enable --now clouddns","Hooray!".yellow());
+    println!("{} CloudIPsyncr has been now set up. If you have installed this using your package manager:\nTo make this start on system boot, run:\n   sudo systemctl enable cloudipsyncr\nTo start now AND on system boot:\n   sudo systemctl enable --now clouddns","Hooray!".yellow());
 }
