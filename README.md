@@ -39,6 +39,14 @@ In every release, there is a Quick Start command. Just paste it into the termina
 3. Write a simple systemd service (optional)
    - Run `systemctl edit --full --force cloudipsyncr`
    - Paste the following contents
+# A word on SELinux
+
+After configuring, run this command to make the service work.
+```sh
+sudo chcon -v -u system_u -r object_r -t bin_t /usr/bin/cloudipsyncr
+```
+---
+
 ```ini
 [Unit]
 Description=CloudIPsyncr
