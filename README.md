@@ -14,6 +14,8 @@ To migrate, run `curl https://raw.githubusercontent.com/MajliTech/CloudIPsyncr/m
 
 ---
 
+
+
 ## What does this do?
 This simple program checks your IP every minute, and updates it in CloudFlare. This is very useful when you have a rotating IP address, such when setting up a home server available to the clearnet. 
 ## How to install it?
@@ -39,6 +41,11 @@ In every release, there is a Quick Start command. Just paste it into the termina
 3. Write a simple systemd service (optional)
    - Run `systemctl edit --full --force cloudipsyncr`
    - Paste the following contents
+# A word on SELinux
+
+For some reason the included service file (down below) does not quite work with SELinux. If anyone has a fix for this, please post in issues.
+
+---
 ```ini
 [Unit]
 Description=CloudIPsyncr
