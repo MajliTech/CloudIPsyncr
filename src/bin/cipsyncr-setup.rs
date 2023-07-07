@@ -153,7 +153,7 @@ fn main() {
                 json::JsonValue::String(response["result"][0]["id"].as_str().unwrap().to_string());
             if response["result"][0]["type"].as_str().unwrap().to_string()!="A" || response["result"][0]["type"].as_str().unwrap().to_string()!="AAAA" {
                 check_ip_version(response["result"][0]["type"].as_str().unwrap().to_string());
-                config["type"]=json::JsonValue::String(response["result"][0]["id"].as_str().unwrap().to_string());
+                config["type"]=json::JsonValue::String(response["result"][0]["type"].as_str().unwrap().to_string());
             }
         } else {
             println!(
