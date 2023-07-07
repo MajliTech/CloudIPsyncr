@@ -43,9 +43,12 @@ In every release, there is a Quick Start command. Just paste it into the termina
    - Paste the following contents
 # A word on SELinux
 
-For some reason the included service file (down below) does not quite work with SELinux. If anyone has a fix for this, please post in issues.
-
+After configuring, run this command to make the service work.
+```sh
+sudo chcon -v -u system_u -r object_r -t bin_t /usr/bin/cloudipsyncr
+```
 ---
+
 ```ini
 [Unit]
 Description=CloudIPsyncr
