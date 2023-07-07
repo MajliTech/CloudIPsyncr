@@ -24,8 +24,7 @@ chmod +x /usr/bin/cloudipsyncr
 cp target/release/cipsyncr-setup /usr/bin
 chmod +x /usr/bin/cipsyncr-setup
 echo Compiled and installed successfully
-echo running cloudipsyncr-setup
-cloudipsyncr-setup
+echo run cipsyncr-setup to setup
 if [ $DEPORT_RUST -eq 1 ]
 then
 echo Uninstalling rustup...
