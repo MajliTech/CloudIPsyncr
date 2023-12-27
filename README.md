@@ -1,3 +1,12 @@
+# Archived
+
+I decied to archive this because of
+1. My inexperience in Rust
+2. No time to work
+This (might) still work on your server.
+
+---
+
 # CloudIPsyncr 
 
 [![Build executables](https://github.com/MajliTech/clouddns/actions/workflows/build.yml/badge.svg)](https://github.com/MajliTech/clouddns/actions/workflows/build.yml)
